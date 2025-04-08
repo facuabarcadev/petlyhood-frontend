@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@petlyhood-frontend/petlyhood-core": ["libs/src/index.ts"]
+      "@petlyhood-frontend/petlyhood-core": ["libs/petlyhood-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

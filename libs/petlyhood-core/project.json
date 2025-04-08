@@ -1,7 +1,7 @@
 {
   "name": "petlyhood-core",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/src",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/petlyhood-core/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/ng-package.json"
+        "project": "libs/petlyhood-core/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/tsconfig.lib.prod.json"
+          "tsConfig": "libs/petlyhood-core/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/tsconfig.lib.json"
+          "tsConfig": "libs/petlyhood-core/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/jest.config.ts"
+        "jestConfig": "libs/petlyhood-core/jest.config.ts"
       }
     },
     "lint": {
