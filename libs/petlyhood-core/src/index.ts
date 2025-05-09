@@ -1,2 +1,2 @@
-export * from './lib/petlyhood-core/petlyhood-core.component';
 export * from './lib/petlyhood-example/petlyhood-example.component';
+export * from './lib/auth/auth.service';

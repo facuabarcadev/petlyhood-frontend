@@ -6,7 +6,7 @@ import {
   IonContent,
 } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
-import { PetlyhoodExampleComponent } from '@petlyhood-frontend/petlyhood-core';
+import { AuthComponent } from '@petlyhood-frontend/petlyhood-core';
 
 @Component({
   selector: 'app-tab1',
@@ -19,7 +19,7 @@ import { PetlyhoodExampleComponent } from '@petlyhood-frontend/petlyhood-core';
     IonTitle,
     IonContent,
     ExploreContainerComponent,
-    PetlyhoodExampleComponent
+    AuthComponent
   ],
 })
 export class Tab1Page {

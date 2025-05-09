@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { PetlyhoodExampleComponent } from '@petlyhood-frontend/petlyhood-core';
+import { AuthComponent } from '@petlyhood-frontend/petlyhood-core';
 
 @Component({
-  imports: [PetlyhoodExampleComponent],
+  imports: [AuthComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

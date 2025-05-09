@@ -1,1 +1,21 @@
-<p>petlyhood-example works!!!</p>
+<div class="auth-container">
+  <h1>Gestión de Autenticación</h1>
+
+  <!-- Mostrar información del usuario autenticado -->
+  <div *ngIf="currentUser; else loginTemplate">
+    <h3>👋 Bienvenido, {{ currentUser.displayName || 'Usuario' }}</h3>
+    <p>Email: {{ currentUser.email }}</p>
+    <button (click)="logout()">Cerrar sesión</button>
+  </div>
+
+  <!-- Mostrar formulario de inicio de sesión -->
+  <ng-template #loginTemplate>
+    <p>No has iniciado sesión.</p>
+    <button (click)="loginWithGoogle()">Iniciar sesión con Google</button>
+  </ng-template>
+
+  <!-- Mostrar mensajes de error -->
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+</div>
