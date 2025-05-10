@@ -24,9 +24,5 @@ jobs:
           cache: 'npm'
 
       - run: npm ci --legacy-peer-deps
-
-      # Especifica NX_BASE y NX_HEAD para nx affected
-      - run: |
-          export NX_BASE=origin/main
-          export NX_HEAD=$(git rev-parse HEAD)
-          npx nx affected --target=lint test build
+      - run: npm run lint:all
+      - run: npm run test:all
