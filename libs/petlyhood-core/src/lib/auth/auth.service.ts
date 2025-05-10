@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { initializeApp, getApps } from 'firebase/app';
 import {
   getAuth, GoogleAuthProvider, signInWithPopup, signOut, Auth, User
@@ -6,13 +6,14 @@ import {
 import { firebaseConfig } from '../firebase/firebase.config';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom, BehaviorSubject, Observable } from 'rxjs';
-import { environment as env } from '../../environments/environment';
+import { EnvironmentConfigService } from '../config/environment-config.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private firebaseApp = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
   private auth: Auth = getAuth(this.firebaseApp);
   private currentUser$ = new BehaviorSubject<User | null>(this.auth.currentUser);
+  private envConfigService = inject(EnvironmentConfigService);
 
   constructor(private http: HttpClient) {
     // Suscribirse a los cambios de estado de Firebase Auth
@@ -32,7 +33,7 @@ export class AuthService {
 
       await firstValueFrom(
         this.http.post(
-          `${env.apiUrl}/api/users/register`,
+          `${this.envConfigService.apiUrl}/api/users/register`,
           {},
           {
             headers: {
