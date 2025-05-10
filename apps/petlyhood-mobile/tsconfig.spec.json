@@ -2,9 +2,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
-    "target": "es2016",
-    "types": ["jest", "node"]
+    "module": "commonjs", // CommonJS es necesario para Jest.
+    "target": "ES2015", // Actualizamos para mejor compatibilidad con ES Modules.
+    "types": ["jest", "node"], // Agrega tipado para Jest y Node.js.
+    "esModuleInterop": true, // Garantiza compatibilidad con módulos ES.
+    "allowSyntheticDefaultImports": true // Permite imports por defecto en módulos comunes.
   },
   "files": ["src/test-setup.ts"],
   "include": [

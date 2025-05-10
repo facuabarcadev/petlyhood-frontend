@@ -16,7 +16,7 @@ import { triangle, ellipse, square } from 'ionicons/icons';
   standalone: true,
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
 })
-export class TabsPage {
+export class TabsPageComponent {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor() {

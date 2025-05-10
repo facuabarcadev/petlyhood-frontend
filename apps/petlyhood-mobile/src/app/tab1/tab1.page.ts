@@ -22,6 +22,5 @@ import { AuthComponent } from '@petlyhood-frontend/petlyhood-core';
     AuthComponent
   ],
 })
-export class Tab1Page {
-  constructor() {}
+export class Tab1PageComponent {
 }

@@ -20,6 +20,5 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
     ExploreContainerComponent,
   ],
 })
-export class Tab3Page {
-  constructor() {}
+export class Tab3PageComponent {
 }
